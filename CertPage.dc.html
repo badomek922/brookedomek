@@ -20,12 +20,12 @@
   @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:none;}}
 </style>
 </helmet>
-<div style="font-family:'Instrument Sans',system-ui,sans-serif;color:#1e1d1b;background:#faf8f3;font-size:17px;line-height:1.65;">
+<div style="font-family:'Instrument Sans',system-ui,sans-serif;color:#1e1d1b;background:#faf8f3;font-size:17px;line-height:1.65;overflow-x:hidden;">
 
   <dc-import name="SiteHeader" hint-size="100%,84px"></dc-import>
 
   <!-- HERO -->
-  <section style="display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(32px,6vw,80px);align-items:center;padding:clamp(48px,7vw,96px) clamp(24px,6vw,72px);max-width:1300px;margin:0 auto;">
+  <section style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));gap:clamp(32px,6vw,80px);align-items:center;padding:clamp(48px,7vw,96px) clamp(24px,6vw,72px);max-width:1300px;margin:0 auto;">
     <div style="animation:fadeUp .8s ease both;">
       <a href="index.html#certs" style="display:inline-flex;align-items:center;gap:.5em;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#6e6a62;text-decoration:none;margin-bottom:26px;" style-hover="color:#94765a;">&larr; All Certifications</a>
       <div style="font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:#94765a;font-weight:600;margin-bottom:18px;">{{ cred }}</div>
@@ -60,7 +60,7 @@
         <div style="font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:#94765a;font-weight:600;margin-bottom:20px;">What this means for you</div>
         <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(1.9rem,3.6vw,3rem);line-height:1.1;margin:0;letter-spacing:-.01em;">{{ benefitsTitle }}</h2>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3vw,44px);">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:clamp(24px,3vw,44px);">
         <sc-for list="{{ benefits }}" as="b" hint-placeholder-count="3">
           <div style="border-top:2px solid #1e1d1b;padding-top:24px;">
             <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.55rem;margin:0 0 10px;line-height:1.12;">{{ b.title }}</h3>
@@ -78,7 +78,7 @@
         <div style="font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:#c9b49c;font-weight:600;margin-bottom:20px;">{{ pillarsKicker }}</div>
         <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(1.9rem,3.6vw,3rem);line-height:1.1;margin:0;letter-spacing:-.01em;">{{ pillarsTitle }}</h2>
       </div>
-      <div style="display:grid;grid-template-columns:repeat({{ pillarCols }},1fr);gap:clamp(24px,3vw,44px);">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:clamp(24px,3vw,44px);">
         <sc-for list="{{ pillars }}" as="p" hint-placeholder-count="4">
           <div style="border-top:1px solid rgba(239,234,221,.28);padding-top:24px;">
             <div style="height:4px;width:44px;border-radius:2px;background:{{ p.color }};margin-bottom:16px;"></div>
@@ -104,7 +104,7 @@
   <section style="padding:clamp(56px,7vw,96px) clamp(24px,6vw,72px);">
     <div style="max-width:1100px;margin:0 auto;">
       <div style="text-align:center;font-size:.75rem;letter-spacing:.24em;text-transform:uppercase;color:#6e6a62;font-weight:600;margin-bottom:44px;">Explore Brooke's other certifications</div>
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(18px,2.5vw,36px);">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(170px,100%),1fr));gap:clamp(18px,2.5vw,36px);">
         <a href="metaperformance.html" style="display:flex;flex-direction:column;align-items:center;text-align:center;text-decoration:none;color:#1e1d1b;gap:14px;" style-hover="color:#94765a;">
           <div style="width:112px;"><dc-import name="CertSeal" logo="https://caylahorey.com/wp-content/uploads/meta-performance-institute-600-300x300.png" initials="MP" line1="MetaPerformance" line2="Coach" hint-size="112px,112px"></dc-import></div>
           <span style="font-size:.9rem;font-weight:600;">MetaPerformance&trade; Coach</span>

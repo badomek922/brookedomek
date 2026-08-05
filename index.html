@@ -23,15 +23,15 @@
   @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:none;}}
 </style>
 </helmet>
-<div style="--base: {{ base }}; --alt: {{ alt }}; --ink: {{ ink }}; --muted: {{ muted }}; --line: {{ line }}; --accent: {{ accent }}; font-family:'Instrument Sans',system-ui,sans-serif; color:var(--ink,#1e1d1b); background:var(--base,#faf8f3); font-size:17px; line-height:1.65;">
+<div style="--base: {{ base }}; --alt: {{ alt }}; --ink: {{ ink }}; --muted: {{ muted }}; --line: {{ line }}; --accent: {{ accent }}; font-family:'Instrument Sans',system-ui,sans-serif; color:var(--ink,#1e1d1b); background:var(--base,#faf8f3); font-size:17px; line-height:1.65; overflow-x:hidden;">
 
   <!-- ============ HEADER ============ -->
-  <header style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px clamp(24px,6vw,72px);background:var(--base,#faf8f3);border-bottom:1px solid var(--line,#e5e0d6);">
+  <header style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:16px clamp(18px,5vw,72px);background:var(--base,#faf8f3);border-bottom:1px solid var(--line,#e5e0d6);">
     <a href="#top" style="display:flex;flex-direction:column;line-height:1;color:var(--ink,#1e1d1b);">
       <span style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;letter-spacing:.06em;">Brooke Domek</span>
       <span style="font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--muted,#6e6a62);margin-top:5px;">Vision &middot; Leadership &middot; Team Coaching</span>
     </a>
-    <nav style="display:flex;align-items:center;gap:30px;font-size:.82rem;letter-spacing:.04em;">
+    <nav style="display:flex;align-items:center;flex-wrap:wrap;gap:12px clamp(14px,2.4vw,30px);font-size:.82rem;letter-spacing:.04em;">
       <a href="#work" style="color:var(--ink,#1e1d1b);">Services</a>
       <a href="#about" style="color:var(--ink,#1e1d1b);">The&nbsp;Approach</a>
       <a href="#voices" style="color:var(--ink,#1e1d1b);">Testimonials</a>
@@ -42,7 +42,7 @@
   </header>
 
   <!-- ============ HERO ============ -->
-  <section id="top" style="display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,6vw,80px);align-items:center;padding:clamp(56px,8vw,110px) clamp(24px,6vw,72px) clamp(48px,6vw,90px);max-width:1360px;margin:0 auto;">
+  <section id="top" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(360px,100%),1fr));gap:clamp(32px,6vw,80px);align-items:center;padding:clamp(40px,8vw,110px) clamp(24px,6vw,72px) clamp(48px,6vw,90px);max-width:1360px;margin:0 auto;">
     <div style="animation:fadeUp .9s ease both;">
       <div style="font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--accent,#94765a);font-weight:600;margin-bottom:24px;">Executive &middot; Team &middot; Vision Coaching</div>
       <h1 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(2.7rem,5.4vw,4.6rem);line-height:1.02;letter-spacing:-.01em;margin:0 0 26px;">Nothing costs more than <span style="font-style:italic;color:var(--accent,#94765a);">an unclear direction.</span></h1>
@@ -86,7 +86,7 @@
         <div style="font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--accent,#94765a);font-weight:600;margin-bottom:20px;">Is this you?</div>
         <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(2rem,3.8vw,3.1rem);line-height:1.08;margin:0;letter-spacing:-.01em;">Unclear direction rarely announces itself. It just quietly slows everything down.</h2>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3vw,48px);">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(250px,100%),1fr));gap:clamp(24px,3vw,48px);">
         <div style="border-top:2px solid var(--ink,#1e1d1b);padding-top:26px;">
           <div style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--accent,#94765a);margin-bottom:14px;">01</div>
           <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.7rem;margin:0 0 10px;line-height:1.15;">You're working harder than ever and moving slower than before.</h3>
@@ -109,7 +109,7 @@
 
   <!-- ============ ABOUT ============ -->
   <section id="about" style="padding:clamp(72px,10vw,140px) clamp(24px,6vw,72px);">
-    <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(36px,6vw,88px);align-items:center;">
+    <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:clamp(36px,6vw,88px);align-items:center;">
       <div style="position:relative;">
         <div style="aspect-ratio:4/4.4;background-image:url('images/brooke-about.jpg');background-size:cover;background-position:center 30%;border-radius:20px 20px 200px 200px;"></div>
         <div style="position:absolute;bottom:26px;left:-18px;background:var(--base,#faf8f3);border:1px solid var(--line,#e5e0d6);border-radius:14px;padding:16px 22px;box-shadow:0 18px 40px -24px rgba(38,37,33,.4);">
@@ -138,7 +138,7 @@
           <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(2rem,3.8vw,3.1rem);line-height:1.08;margin:0;letter-spacing:-.01em;">Four ways to move from where you are to where you're called to be.</h2>
         </div>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(20px,2.5vw,36px);">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:clamp(20px,2.5vw,36px);">
         <sc-for list="{{ services }}" as="s" hint-placeholder-count="4">
           <article style="background:var(--base,#faf8f3);border:1px solid var(--line,#e5e0d6);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;" style-hover="border-color:var(--accent,#94765a);">
             <div style="aspect-ratio:16/9;background-image:{{ s.img }};background-size:cover;background-position:center;"></div>
@@ -156,13 +156,13 @@
 
   <!-- ============ COLLECTIVE BAND ============ -->
   <section id="collective" style="padding:clamp(72px,10vw,140px) clamp(24px,6vw,72px);">
-    <div style="max-width:1080px;margin:0 auto;background:var(--accent,#94765a);border-radius:26px;padding:clamp(40px,6vw,72px);color:#faf8f3;display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center;">
+    <div style="max-width:1080px;margin:0 auto;background:var(--accent,#94765a);border-radius:26px;padding:clamp(40px,6vw,72px);color:#faf8f3;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:32px;align-items:center;">
       <div>
         <div style="font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;opacity:.85;font-weight:600;margin-bottom:20px;">Women's Leadership Collective</div>
         <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(1.9rem,3.4vw,2.8rem);line-height:1.1;margin:0 0 16px;">For accomplished, faith-driven women who are done staying stuck.</h2>
         <p style="opacity:.9;margin:0;max-width:34em;text-wrap:pretty;">A guided circle for growth, clarity, and bold leadership &mdash; together. Doors open in cohorts; join the waitlist to be first to know.</p>
       </div>
-      <div style="justify-self:end;">
+      <div>
         <a href="womens-collective.html" style="display:inline-flex;align-items:center;padding:1.05em 2em;background:#faf8f3;color:var(--ink,#1e1d1b);border-radius:100px;font-size:.95rem;font-weight:600;letter-spacing:.02em;text-decoration:none;" style-hover="background:var(--ink,#1e1d1b);color:#faf8f3;">Join the Waitlist</a>
       </div>
     </div>
@@ -213,7 +213,7 @@
         <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(1.9rem,3.6vw,3rem);line-height:1.1;margin:0 0 14px;letter-spacing:-.01em;">Rigorously certified. Deeply practical.</h2>
         <p style="color:var(--muted,#6e6a62);margin:0;text-wrap:pretty;">Every engagement draws on world-class coaching frameworks. Select a certification to see how it shapes our work together.</p>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(18px,2.5vw,36px);">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(170px,100%),1fr));gap:clamp(18px,2.5vw,36px);">
         <a href="metaperformance.html" style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px;padding:14px;border-radius:16px;color:var(--ink,#1e1d1b);text-decoration:none;transition:background .2s;" style-hover="background:var(--alt,#efeae1);">
           <div style="width:128px;"><dc-import name="CertSeal" logo="https://caylahorey.com/wp-content/uploads/meta-performance-institute-600-300x300.png" initials="MP" line1="MetaPerformance" line2="Coach" hint-size="128px,128px"></dc-import></div>
           <div><div style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.3rem;line-height:1.1;">MetaPerformance&trade;</div><div style="font-size:.82rem;color:var(--muted,#6e6a62);margin-top:2px;">Certified Coach</div></div>
@@ -246,7 +246,7 @@
 
   <!-- ============ FOOTER ============ -->
   <footer id="giving" style="background:var(--ink,#1e1d1b);color:#cfc9bd;padding:clamp(56px,7vw,84px) clamp(24px,6vw,72px) 40px;">
-    <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:44px;border-bottom:1px solid rgba(244,240,230,.14);">
+    <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:36px;padding-bottom:44px;border-bottom:1px solid rgba(244,240,230,.14);">
       <div>
         <div style="font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:600;color:#faf8f3;letter-spacing:.04em;">Brooke Domek</div>
         <p style="max-width:26em;color:#a8a296;margin:14px 0 0;font-size:.98rem;text-wrap:pretty;">Executive, team, and vision coaching &mdash; where clarity meets capability.</p>

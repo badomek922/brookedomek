@@ -23,7 +23,7 @@
   </sc-if>
   <sc-if value="{{ isOpen }}" hint-placeholder-val="{{ true }}">
     <form onSubmit="{{ submit }}" style="background:#faf8f3;border:1px solid #e5e0d6;border-radius:18px;padding:clamp(30px,4vw,48px);display:grid;gap:20px;">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:20px;">
         <label style="display:grid;gap:8px;">
           <span style="font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:#6e6a62;font-weight:600;">First name</span>
           <input name="firstName" required="{{ true }}" placeholder="Brooke" style="font-family:inherit;font-size:1rem;padding:.85em 1em;border:1px solid #ddd6c9;border-radius:10px;background:#fff;color:#1e1d1b;outline:none;" style-focus="border-color:#94765a;">

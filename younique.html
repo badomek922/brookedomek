@@ -21,12 +21,12 @@
   @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:none;}}
 </style>
 </helmet>
-<div style="font-family:'Instrument Sans',system-ui,sans-serif;color:#1e1d1b;background:#faf8f3;font-size:17px;line-height:1.65;">
+<div style="font-family:'Instrument Sans',system-ui,sans-serif;color:#1e1d1b;background:#faf8f3;font-size:17px;line-height:1.65;overflow-x:hidden;">
 
   <dc-import name="SiteHeader" hint-size="100%,84px"></dc-import>
 
   <!-- HERO -->
-  <section style="display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(32px,6vw,80px);align-items:center;padding:clamp(48px,7vw,100px) clamp(24px,6vw,72px);max-width:1300px;margin:0 auto;">
+  <section style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));gap:clamp(32px,6vw,80px);align-items:center;padding:clamp(48px,7vw,100px) clamp(24px,6vw,72px);max-width:1300px;margin:0 auto;">
     <div style="animation:fadeUp .8s ease both;">
       <a href="index.html#certs" style="display:inline-flex;align-items:center;gap:.5em;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#6e6a62;text-decoration:none;margin-bottom:26px;" style-hover="color:#94765a;">&larr; All Certifications</a>
       <div style="font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:#94765a;font-weight:600;margin-bottom:18px;">Life Younique&reg; &middot; Discover Your Unique Calling</div>
@@ -62,7 +62,7 @@
         <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(1.9rem,3.6vw,3rem);line-height:1.1;margin:0 0 16px;letter-spacing:-.01em;">You can't microwave clarity. It's a process.</h2>
         <p style="color:#6e6a62;max-width:44em;margin:0;text-wrap:pretty;">The Clarity Spiral is the path we walk together &mdash; investigating what God has done in your life, interpreting what we find, inscribing what He reveals, and implementing your calling into daily life.</p>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(20px,2.5vw,32px);margin-top:52px;">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:clamp(20px,2.5vw,32px);margin-top:52px;">
         <sc-for list="{{ spiral }}" as="s" hint-placeholder-count="4">
           <div style="position:relative;">
             <div style="display:flex;align-items:baseline;gap:12px;border-top:2px solid #94765a;padding-top:22px;margin-bottom:14px;">
@@ -92,7 +92,7 @@
         <div style="font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:#94765a;font-weight:600;margin-bottom:20px;">Ways to experience Younique</div>
         <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(1.9rem,3.6vw,3rem);line-height:1.1;margin:0;letter-spacing:-.01em;">Three ways to begin, at your pace.</h2>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,2.5vw,32px);">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:clamp(20px,2.5vw,32px);">
         <sc-for list="{{ ways }}" as="w" hint-placeholder-count="3">
           <article style="background:#efeae1;border:1px solid #e5e0d6;border-radius:18px;padding:34px 32px;display:flex;flex-direction:column;">
             <div style="font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:#94765a;font-weight:600;margin-bottom:14px;">{{ w.tag }}</div>
@@ -108,7 +108,7 @@
   <section style="background:#efeae1;padding:clamp(64px,9vw,120px) clamp(24px,6vw,72px);">
     <div style="max-width:1160px;margin:0 auto;">
       <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(1.9rem,3.6vw,3rem);line-height:1.1;margin:0 0 44px;letter-spacing:-.01em;max-width:16em;">Why clarify your calling?</h2>
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(20px,2.5vw,36px);">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(210px,100%),1fr));gap:clamp(20px,2.5vw,36px);">
         <sc-for list="{{ invest }}" as="i" hint-placeholder-count="4">
           <div style="border-top:1px solid #b3ada1;padding-top:22px;">
             <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.4rem;margin:0 0 10px;line-height:1.1;">{{ i.title }}</h3>
@@ -121,7 +121,7 @@
 
   <!-- THE BOOK -->
   <section style="padding:clamp(64px,9vw,120px) clamp(24px,6vw,72px);">
-    <div style="max-width:1080px;margin:0 auto;display:grid;grid-template-columns:.7fr 1.3fr;gap:clamp(36px,6vw,80px);align-items:center;">
+    <div style="max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:clamp(36px,6vw,80px);align-items:center;">
       <div style="position:relative;justify-self:center;width:100%;max-width:280px;aspect-ratio:2/3;border-radius:6px 12px 12px 6px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(30,29,27,.6);">
         <image-slot id="younique-book-cover" src="https://willmancini.com/uploads/products/3DYounique_SpineOut2-300.png" shape="rounded" radius="10" fit="contain" placeholder="Drop the Younique book cover"></image-slot>
       </div>
