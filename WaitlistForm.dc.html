@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<div style="font-family:'Instrument Sans',system-ui,sans-serif;">
+  <sc-if value="{{ isDone }}" hint-placeholder-val="{{ false }}">
+    <div style="background:#faf8f3;border:1px solid #e5e0d6;border-radius:18px;padding:clamp(40px,6vw,64px);text-align:center;">
+      <div style="width:52px;height:52px;border-radius:50%;background:#94765a;color:#faf8f3;font-size:1.5rem;display:flex;align-items:center;justify-content:center;margin:0 auto 22px;">&#10003;</div>
+      <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.9rem;margin:0 0 12px;">You're on the list.</h3>
+      <p style="color:#6e6a62;margin:0 auto;max-width:30em;text-wrap:pretty;">Thank you for raising your hand. I'll be in touch personally before the next cohort opens with dates, format, and what to expect.</p>
+    </div>
+  </sc-if>
+  <sc-if value="{{ isMailto }}" hint-placeholder-val="{{ false }}">
+    <div style="background:#faf8f3;border:1px solid #e5e0d6;border-radius:18px;padding:clamp(40px,6vw,64px);text-align:center;">
+      <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.9rem;margin:0 0 12px;">One last click.</h3>
+      <p style="color:#6e6a62;margin:0 auto;max-width:32em;text-wrap:pretty;">Your email app should have opened with your details already filled in &mdash; press send and you're on the list. If nothing opened, email me directly and I'll add you myself.</p>
+    </div>
+  </sc-if>
+  <sc-if value="{{ isOpen }}" hint-placeholder-val="{{ true }}">
+    <form onSubmit="{{ submit }}" style="background:#faf8f3;border:1px solid #e5e0d6;border-radius:18px;padding:clamp(30px,4vw,48px);display:grid;gap:20px;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+        <label style="display:grid;gap:8px;">
+          <span style="font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:#6e6a62;font-weight:600;">First name</span>
+          <input name="firstName" required="{{ true }}" placeholder="Brooke" style="font-family:inherit;font-size:1rem;padding:.85em 1em;border:1px solid #ddd6c9;border-radius:10px;background:#fff;color:#1e1d1b;outline:none;" style-focus="border-color:#94765a;">
+        </label>
+        <label style="display:grid;gap:8px;">
+          <span style="font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:#6e6a62;font-weight:600;">Last name</span>
+          <input name="lastName" placeholder="Domek" style="font-family:inherit;font-size:1rem;padding:.85em 1em;border:1px solid #ddd6c9;border-radius:10px;background:#fff;color:#1e1d1b;outline:none;" style-focus="border-color:#94765a;">
+        </label>
+      </div>
+      <label style="display:grid;gap:8px;">
+        <span style="font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:#6e6a62;font-weight:600;">Email</span>
+        <input name="email" type="email" required="{{ true }}" placeholder="you@example.com" style="font-family:inherit;font-size:1rem;padding:.85em 1em;border:1px solid #ddd6c9;border-radius:10px;background:#fff;color:#1e1d1b;outline:none;" style-focus="border-color:#94765a;">
+      </label>
+      <label style="display:grid;gap:8px;">
+        <span style="font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:#6e6a62;font-weight:600;">City &amp; state <span style="text-transform:none;letter-spacing:0;font-weight:400;">(optional)</span></span>
+        <input name="location" placeholder="Dallas, TX" style="font-family:inherit;font-size:1rem;padding:.85em 1em;border:1px solid #ddd6c9;border-radius:10px;background:#fff;color:#1e1d1b;outline:none;" style-focus="border-color:#94765a;">
+      </label>
+      <label style="display:grid;gap:8px;">
+        <span style="font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:#6e6a62;font-weight:600;">What's prompting you to explore this?</span>
+        <textarea name="reason" rows="4" placeholder="A sentence or two is plenty." style="font-family:inherit;font-size:1rem;padding:.85em 1em;border:1px solid #ddd6c9;border-radius:10px;background:#fff;color:#1e1d1b;outline:none;resize:vertical;" style-focus="border-color:#94765a;"></textarea>
+      </label>
+      <sc-if value="{{ hasError }}" hint-placeholder-val="{{ false }}">
+        <p style="margin:0;font-size:.92rem;color:#9c3a2e;">{{ error }}</p>
+      </sc-if>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin-top:4px;">
+        <button type="submit" disabled="{{ busy }}" style="font-family:inherit;display:inline-flex;align-items:center;padding:1.05em 2em;background:#1e1d1b;color:#faf8f3;border:none;border-radius:100px;font-size:.95rem;font-weight:600;letter-spacing:.02em;cursor:pointer;" style-hover="background:#94765a;">{{ buttonLabel }}</button>
+        <span style="font-size:.86rem;color:#6e6a62;">No spam, ever. Just cohort news.</span>
+      </div>
+    </form>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:680},&quot;supabaseUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;supabaseKey&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;table&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;waitlist&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;endpoint&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;fallbackEmail&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;buttonLabel&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Join the Waitlist&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { status: 'idle', error: '' };
+
+  submit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const data = Object.fromEntries(new FormData(form).entries());
+    const endpoint = this.props.endpoint ?? '';
+    const sbUrl = this.props.supabaseUrl ?? '';
+    const sbKey = this.props.supabaseKey ?? '';
+    this.setState({ status: 'busy', error: '' });
+
+    // Supabase REST insert
+    if (sbUrl && sbKey) {
+      fetch(`${sbUrl.replace(/\/$/, '')}/rest/v1/${this.props.table ?? 'waitlist'}`, {
+        method: 'POST',
+        headers: {
+          apikey: sbKey,
+          Authorization: `Bearer ${sbKey}`,
+          'Content-Type': 'application/json',
+          Prefer: 'return=minimal',
+        },
+        body: JSON.stringify({
+          'first name': data.firstName || '',
+          'last name': data.lastName || '',
+          email: data.email || '',
+          location: data.location || '',
+          reason: data.reason || '',
+        }),
+      })
+        .then((r) => { if (!r.ok) throw new Error('status ' + r.status); this.setState({ status: 'done' }); })
+        .catch(() => this.setState({ status: 'idle', error: 'Something went wrong sending that \u2014 please try again, or use the Start a conversation button and I\u2019ll add you myself.' }));
+      return;
+    }
+
+    // No endpoint configured: fall back to a prefilled email so the lead still
+    // reaches a human. Never show a success state we can't honour.
+    if (!endpoint) {
+      const to = this.props.fallbackEmail ?? '';
+      if (to) {
+        const body = [
+          `Name: ${data.firstName || ''} ${data.lastName || ''}`.trim(),
+          `Email: ${data.email || ''}`,
+          data.location ? `Location: ${data.location}` : '',
+          data.reason ? `\nWhat's prompting me:\n${data.reason}` : '',
+        ].filter(Boolean).join('\n');
+        window.location.href = `mailto:${to}?subject=${encodeURIComponent("Women's Leadership Collective \u2014 waitlist")}&body=${encodeURIComponent(body)}`;
+        this.setState({ status: 'mailto' });
+      } else {
+        this.setState({ status: 'idle', error: 'This form isn\u2019t connected yet \u2014 please reach out through the Book a Call button and I\u2019ll add you to the list myself.' });
+      }
+      return;
+    }
+
+    fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify(data),
+    })
+      .then((r) => { if (!r.ok) throw new Error('bad status'); this.setState({ status: 'done' }); })
+      .catch(() => this.setState({ status: 'idle', error: 'Something went wrong sending that. Please email brooke directly and I\u2019ll add you myself.' }));
+  };
+
+  renderVals() {
+    const s = this.state.status;
+    return {
+      submit: this.submit,
+      isDone: s === 'done',
+      isMailto: s === 'mailto',
+      isOpen: s !== 'done' && s !== 'mailto',
+      busy: s === 'busy',
+      buttonLabel: s === 'busy' ? 'Sending\u2026' : (this.props.buttonLabel ?? 'Join the Waitlist'),
+      hasError: !!this.state.error,
+      error: this.state.error,
+    };
+  }
+}
+</script>
+</body>
+</html>

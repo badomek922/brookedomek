@@ -8,6 +8,7 @@
 <body>
 <x-dc>
 <helmet>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -32,7 +33,7 @@
       <p style="font-size:1.18rem;color:#1e1d1b;max-width:31em;margin:0 0 16px;text-wrap:pretty;">{{ tagline }}</p>
       <p style="font-size:1.02rem;color:#6e6a62;max-width:33em;margin:0 0 34px;text-wrap:pretty;">{{ intro }}</p>
       <div style="display:flex;flex-wrap:wrap;gap:14px;">
-        <a href="https://scheduler.zoom.us/brooke-domek" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;padding:1.05em 1.9em;background:#1e1d1b;color:#faf8f3;border-radius:100px;font-size:.95rem;font-weight:600;letter-spacing:.02em;text-decoration:none;" style-hover="background:#94765a;color:#faf8f3;">{{ ctaLabel }}</a>
+        <a href="{{ ctaHref }}" target="{{ ctaTarget }}" rel="noopener" style="display:inline-flex;align-items:center;padding:1.05em 1.9em;background:#1e1d1b;color:#faf8f3;border-radius:100px;font-size:.95rem;font-weight:600;letter-spacing:.02em;text-decoration:none;" style-hover="background:#94765a;color:#faf8f3;">{{ ctaLabel }}</a>
         <a href="#how" style="display:inline-flex;align-items:center;padding:1.05em 1.9em;border:1px solid #1e1d1b;color:#1e1d1b;border-radius:100px;font-size:.95rem;font-weight:600;letter-spacing:.02em;text-decoration:none;" style-hover="background:#1e1d1b;color:#faf8f3;">See how it works</a>
       </div>
     </div>
@@ -118,13 +119,27 @@
     </div>
   </section>
 
+  <!-- WAITLIST -->
+  <sc-if value="{{ showWaitlist }}" hint-placeholder-val="{{ false }}">
+    <section id="waitlist" style="padding:clamp(64px,9vw,120px) clamp(24px,6vw,72px);">
+      <div style="max-width:760px;margin:0 auto;">
+        <div style="text-align:center;margin-bottom:40px;">
+          <div style="font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:#94765a;font-weight:600;margin-bottom:18px;">Interest list</div>
+          <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(1.9rem,3.6vw,3rem);line-height:1.1;margin:0 0 14px;letter-spacing:-.01em;">Raise your hand for the next cohort.</h2>
+          <p style="color:#6e6a62;margin:0;max-width:32em;margin-inline:auto;text-wrap:pretty;">Tell me a little about where you are. I read every one of these personally and reach out before enrollment opens.</p>
+        </div>
+        <dc-import name="WaitlistForm" supabase-url="{{ supabaseUrl }}" supabase-key="{{ supabaseKey }}" endpoint="{{ waitlistEndpoint }}" fallback-email="{{ waitlistEmail }}" hint-size="100%,520px"></dc-import>
+      </div>
+    </section>
+  </sc-if>
+
   <!-- CTA -->
   <section style="padding:clamp(72px,10vw,140px) clamp(24px,6vw,72px);">
     <div style="max-width:820px;margin:0 auto;text-align:center;">
       <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(2rem,4.2vw,3.4rem);line-height:1.06;margin:0 0 22px;letter-spacing:-.01em;">{{ ctaTitle }}</h2>
       <p style="font-size:1.12rem;color:#6e6a62;max-width:34em;margin:0 auto 34px;text-wrap:pretty;">{{ ctaBody }}</p>
-      <a href="https://scheduler.zoom.us/brooke-domek" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;padding:1.15em 2.2em;background:#1e1d1b;color:#faf8f3;border-radius:100px;font-size:1rem;font-weight:600;letter-spacing:.02em;text-decoration:none;" style-hover="background:#94765a;color:#faf8f3;">{{ ctaLabel }}</a>
-      <div style="margin-top:18px;font-size:.86rem;color:#6e6a62;">Free 30-minute call &middot; No obligation &middot; Calendar invite sent automatically</div>
+      <a href="{{ ctaHref }}" target="{{ ctaTarget }}" rel="noopener" style="display:inline-flex;align-items:center;padding:1.15em 2.2em;background:#1e1d1b;color:#faf8f3;border-radius:100px;font-size:1rem;font-weight:600;letter-spacing:.02em;text-decoration:none;" style-hover="background:#94765a;color:#faf8f3;">{{ ctaLabel }}</a>
+      <div style="margin-top:18px;font-size:.86rem;color:#6e6a62;">{{ ctaFinePrint }}</div>
     </div>
   </section>
 
@@ -180,6 +195,14 @@ class Component extends DCLogic {
       ctaTitle: this.props.ctaTitle ?? '',
       ctaBody: this.props.ctaBody ?? '',
       ctaLabel: this.props.ctaLabel ?? 'Book Your Vision Call',
+      ctaHref: this.props.ctaHref ?? 'https://scheduler.zoom.us/brooke-domek',
+      ctaTarget: (this.props.ctaHref ?? '').startsWith('#') ? '' : '_blank',
+      ctaFinePrint: this.props.ctaFinePrint ?? 'Free 30-minute call \u00b7 No obligation \u00b7 Calendar invite sent automatically',
+      showWaitlist: !!(this.props.waitlist && this.props.waitlist !== 'false'),
+      waitlistEndpoint: this.props.waitlistEndpoint ?? '',
+      waitlistEmail: this.props.waitlistEmail ?? '',
+      supabaseUrl: this.props.supabaseUrl ?? '',
+      supabaseKey: this.props.supabaseKey ?? '',
     };
   }
 }

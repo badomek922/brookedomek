@@ -8,6 +8,7 @@
 <body>
 <x-dc>
 <helmet>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -35,7 +36,7 @@
       <a href="#collective" style="color:var(--ink,#1e1d1b);">Collective</a>
       <a href="#giving" style="color:var(--ink,#1e1d1b);">Giving&nbsp;Back</a>
     </nav>
-    <a href="https://scheduler.zoom.us/brooke-domek" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;padding:.8em 1.4em;background:var(--ink,#1e1d1b);color:#faf8f3;border-radius:100px;font-size:.82rem;font-weight:600;letter-spacing:.03em;white-space:nowrap;" style-hover="background:var(--accent,#94765a);color:#faf8f3;">Book Your Vision Call</a>
+    <a href="https://scheduler.zoom.us/brooke-domek" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;padding:.8em 1.4em;background:var(--ink,#1e1d1b);color:#faf8f3;border-radius:100px;font-size:.82rem;font-weight:600;letter-spacing:.03em;white-space:nowrap;" style-hover="background:var(--accent,#94765a);color:#faf8f3;">Start a conversation</a>
   </header>
 
   <!-- ============ HERO ============ -->
@@ -45,7 +46,7 @@
       <h1 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(2.7rem,5.4vw,4.6rem);line-height:1.02;letter-spacing:-.01em;margin:0 0 26px;">Reimagine your potential.<br><span style="font-style:italic;color:var(--accent,#94765a);">Clarify</span> your vision. Amplify your impact.</h1>
       <p style="font-size:1.12rem;color:var(--muted,#6e6a62);max-width:30em;margin:0 0 34px;text-wrap:pretty;">Coaching that transforms challenge into breakthrough &mdash; where clarity meets capability. For the leaders, teams, and women ready to think differently and lead boldly.</p>
       <div style="display:flex;flex-wrap:wrap;gap:14px;">
-        <a href="https://scheduler.zoom.us/brooke-domek" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;padding:1.05em 1.9em;background:var(--ink,#1e1d1b);color:#faf8f3;border-radius:100px;font-size:.95rem;font-weight:600;letter-spacing:.02em;" style-hover="background:var(--accent,#94765a);color:#faf8f3;">Book Your Vision Call</a>
+        <a href="https://scheduler.zoom.us/brooke-domek" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;padding:1.05em 1.9em;background:var(--ink,#1e1d1b);color:#faf8f3;border-radius:100px;font-size:.95rem;font-weight:600;letter-spacing:.02em;" style-hover="background:var(--accent,#94765a);color:#faf8f3;">Start a conversation</a>
         <a href="#work" style="display:inline-flex;align-items:center;padding:1.05em 1.9em;border:1px solid var(--ink,#1e1d1b);color:var(--ink,#1e1d1b);border-radius:100px;font-size:.95rem;font-weight:600;letter-spacing:.02em;" style-hover="background:var(--ink,#1e1d1b);color:#faf8f3;">Explore the work</a>
       </div>
     </div>
@@ -171,9 +172,16 @@
   <section id="voices" style="background:var(--ink,#1e1d1b);color:#faf8f3;padding:clamp(80px,11vw,150px) clamp(24px,6vw,72px);">
     <div style="max-width:1000px;margin:0 auto;">
       <div style="text-align:center;font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--accent,#94765a);font-weight:600;margin-bottom:40px;">In their words</div>
-      <div style="min-height:300px;display:flex;flex-direction:column;justify-content:center;text-align:center;">
-        <blockquote style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(1.4rem,2.9vw,2.4rem);line-height:1.36;margin:0 0 26px;text-wrap:pretty;">&ldquo;{{ current.quote }}&rdquo;</blockquote>
-        <div style="font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:#c9b49c;">{{ current.name }}</div>
+      <div style="min-height:340px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;">
+        <blockquote style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(1.6rem,3.2vw,2.6rem);line-height:1.3;margin:0 0 22px;max-width:20em;text-wrap:pretty;">&ldquo;{{ current.pull }}&rdquo;</blockquote>
+        <p style="font-size:1rem;line-height:1.65;color:#b3ada1;margin:0 0 30px;max-width:44em;text-wrap:pretty;">{{ current.quote }}</p>
+        <div style="display:flex;align-items:center;gap:16px;">
+          <div style="position:relative;width:56px;height:56px;border-radius:50%;overflow:hidden;background:#3a3833;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:#c9b49c;">{{ current.initials }}</div>
+          <div style="text-align:left;">
+            <div style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:#faf8f3;line-height:1.1;">{{ current.name }}</div>
+            <div style="font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:#c9b49c;margin-top:3px;">{{ current.role }}</div>
+          </div>
+        </div>
       </div>
       <div style="display:flex;align-items:center;justify-content:center;gap:22px;margin-top:44px;">
         <button onClick="{{ prev }}" aria-label="Previous testimonial" style="width:46px;height:46px;border-radius:50%;border:1px solid rgba(250,248,243,.3);background:transparent;color:#faf8f3;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;" style-hover="background:var(--accent,#94765a);border-color:var(--accent,#94765a);">&larr;</button>
@@ -222,7 +230,7 @@
       <div style="font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--accent,#94765a);font-weight:600;margin-bottom:24px;">Your next step</div>
       <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(2.2rem,4.6vw,3.8rem);line-height:1.05;margin:0 0 24px;letter-spacing:-.01em;">Ready to reimagine what's possible?</h2>
       <p style="font-size:1.15rem;color:var(--muted,#6e6a62);max-width:34em;margin:0 auto 36px;text-wrap:pretty;">Let's find the clarity beneath the noise and build the path forward &mdash; together. Start with a complimentary vision call.</p>
-      <a href="https://scheduler.zoom.us/brooke-domek" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;padding:1.15em 2.2em;background:var(--ink,#1e1d1b);color:#faf8f3;border-radius:100px;font-size:1rem;font-weight:600;letter-spacing:.02em;" style-hover="background:var(--accent,#94765a);color:#faf8f3;">Book Your Vision Call</a>
+      <a href="https://scheduler.zoom.us/brooke-domek" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;padding:1.15em 2.2em;background:var(--ink,#1e1d1b);color:#faf8f3;border-radius:100px;font-size:1rem;font-weight:600;letter-spacing:.02em;" style-hover="background:var(--accent,#94765a);color:#faf8f3;">Start a conversation</a>
     </div>
   </section>
 
@@ -239,7 +247,7 @@
           <a href="#work" style="color:#cfc9bd;" style-hover="color:#faf8f3;">Services</a>
           <a href="#voices" style="color:#cfc9bd;" style-hover="color:#faf8f3;">Testimonials</a>
           <a href="#collective" style="color:#cfc9bd;" style-hover="color:#faf8f3;">Women's Leadership Collective</a>
-          <a href="https://scheduler.zoom.us/brooke-domek" target="_blank" rel="noopener" style="color:#cfc9bd;" style-hover="color:#faf8f3;">Book a Vision Call</a>
+          <a href="https://scheduler.zoom.us/brooke-domek" target="_blank" rel="noopener" style="color:#cfc9bd;" style-hover="color:#faf8f3;">Start a conversation</a>
         </div>
       </div>
       <div>
@@ -276,10 +284,18 @@ class Component extends DCLogic {
     const faith = this.props.faith ?? 'Subtle';
     const img = (id, w, h) => `url('https://static.wixstatic.com/media/${id}/v1/fill/w_${w},h_${h},al_c,q_85,enc_avif,quality_auto/s.jpg')`;
     const TS = [
-      { name: 'Melissa \u2014 New York', quote: `Brooke's remarkable gift to see problems clearly, to reassess them in the light of greater truths, and to joyfully walk me into another space \u2014 without ever needing to solve the problem \u2014 is transforming for all who meet with her. Brooke redefined "coach" for me.` },
-      { name: 'LeighAnn \u2014 Kentucky', quote: `She was professional, prepared, warm, obviously intelligent, and I believed her when she said she was there to be a "fierce advocate" for my personal ministry goals, for those of the staff, and to better prepare us to serve and work with the congregation.` },
-      { name: 'Katy \u2014 Texas', quote: `Doing coaching with Brooke has truly been life-changing. As a small business owner, I often feel like I'm on an island, but her wisdom, encouragement, and guidance has given me clarity, support, and the push I needed. She has challenged me to grow in ways I never thought possible, and her influence is genuinely changing the trajectory of our business towards MetaPerformance.` },
-      { name: 'Bob \u2014 Texas', quote: `I've known Brooke for several years, both as a co-worker and friend. When she first asked what I thought about using a professional coach, I laughed and said "No" \u2014 it had nothing to do with her capabilities, and everything to do with my own stubbornness. The more I thought about my need to grow, the more I realized I could use some help. When I said yes, she went straight into action, carefully pulling apart the layers of my onion and holding up the mirror of self-actualization with great insight and questions. The way she diligently captures every conversation and never misses a clue is a testament to her ability to coach well \u2014 and to her genuine care for the individual. Truly an amazing experience that helped my compass stop spinning at ten thousand RPMs and point to true north.` },
+      { name: 'Melissa', role: 'New York', slot: 'tm-melissa', initials: 'M',
+        pull: 'Brooke redefined "coach" for me.',
+        quote: `Brooke's remarkable gift to see problems clearly, to reassess them in the light of greater truths, and to joyfully walk me into another space \u2014 without ever needing to solve the problem \u2014 is transforming for all who meet with her.` },
+      { name: 'LeighAnn', role: 'Ministry Leader \u00b7 Kentucky', slot: 'tm-leighann', initials: 'L',
+        pull: 'She was there to be a fierce advocate for my goals.',
+        quote: `She was professional, prepared, warm, obviously intelligent, and I believed her when she said she was there to be a "fierce advocate" for my personal ministry goals, for those of the staff, and to better prepare us to serve and work with the congregation.` },
+      { name: 'Katy', role: 'Founder \u00b7 Texas', slot: 'tm-katy', initials: 'K',
+        pull: 'Her influence is genuinely changing the trajectory of our business.',
+        quote: `As a small business owner, I often feel like I'm on an island, but her wisdom, encouragement, and guidance has given me clarity, support, and the push I needed. She has challenged me to grow in ways I never thought possible.` },
+      { name: 'Bob', role: 'Executive \u00b7 Texas', slot: 'tm-bob', initials: 'B',
+        pull: 'She helped my compass stop spinning and point to true north.',
+        quote: `She went straight into action, carefully pulling apart the layers of my onion and holding up the mirror of self-actualization with great insight and questions. The way she diligently captures every conversation and never misses a clue is a testament to her ability to coach well.` },
     ];
     const _n = TS.length;
     const _i = ((this.state.ti % _n) + _n) % _n;
@@ -292,10 +308,10 @@ class Component extends DCLogic {
       next: () => this.setState(s => ({ ti: (s.ti + 1) % TS.length })),
       dots: TS.map((t, idx) => ({ go: () => this.setState({ ti: idx }), color: idx === _i ? '#c9b49c' : 'rgba(250,248,243,.28)' })),
       services: [
-        { tag: 'One-on-One Coaching', title: 'Expand Your Capacity', desc: 'Empower your leadership journey with personalized executive coaching that unlocks the next level.', cta: 'Read more', href: 'expand-your-capacity.html', img: img('79c53e_c13d3fbffd824efb84e38af75beff613~mv2.jpg', 640, 360) },
-        { tag: 'Team Coaching', title: 'Create a Thriving Team', desc: 'Elevate your organization through team coaching that aligns people around a shared, clear vision.', cta: 'Read more', href: 'thriving-team.html', img: img('79c53e_d5914b14832e4e27a4e87054b23558f0~mv2.jpg', 640, 360) },
-        { tag: 'Life Planning', title: 'Clarify Your Unique Calling', desc: 'Discover your purpose through personalized life planning built around what matters most to you.', cta: 'Read more', href: 'younique.html', img: img('79c53e_839366eaf787422e8a2b290b029e4449~mv2.png', 640, 360) },
-        { tag: 'Group Program', title: "Women's Leadership Collective", desc: 'For accomplished, faith-driven women who are done staying stuck and ready to lead boldly.', cta: 'Join the waitlist', href: 'womens-collective.html', img: img('79c53e_bfc599d9c3ba41feaf8ed76f9c2e3206~mv2.jpg', 640, 360) },
+        { tag: 'One-on-One Coaching', title: 'Expand Your Capacity', desc: "You've outgrown what got you here. Let's build what takes you further \u2014 without burning you out on the way.", cta: 'See how it works', href: 'expand-your-capacity.html', img: img('79c53e_c13d3fbffd824efb84e38af75beff613~mv2.jpg', 640, 360) },
+        { tag: 'Team Coaching', title: 'Create a Thriving Team', desc: "Your people are talented. Let's fix what's getting lost between them and get everyone rowing the same way.", cta: 'See how it works', href: 'thriving-team.html', img: img('79c53e_d5914b14832e4e27a4e87054b23558f0~mv2.jpg', 640, 360) },
+        { tag: 'Life Planning', title: 'Clarify Your Unique Calling', desc: "You sense there's more you're meant for. Let's put language to it \u2014 clear enough to make decisions by.", cta: 'See how it works', href: 'younique.html', img: img('79c53e_839366eaf787422e8a2b290b029e4449~mv2.png', 640, 360) },
+        { tag: 'Group Program', title: "Women's Leadership Collective", desc: "You're done doing the hard inner work alone. Come do it with women who won't let you shrink.", cta: 'Join the waitlist', href: 'womens-collective.html', img: img('79c53e_bfc599d9c3ba41feaf8ed76f9c2e3206~mv2.jpg', 640, 360) },
       ],
     };
   }
