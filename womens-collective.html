@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<dc-import name="ServicePage"
+  kicker="Group Program &middot; Cohorts Open Periodically"
+  title="Women's Leadership Collective"
+  tagline="{{ tagline }}"
+  intro="{{ intro }}"
+  hero-img="{{ heroImg }}"
+  who-title="For accomplished, faith-driven women who are done staying stuck."
+  who="{{ who }}"
+  how-title="A guided circle, not another webinar."
+  how-intro="{{ howIntro }}"
+  steps="{{ steps }}"
+  outcomes-title="Clarity, courage, and women who have your back."
+  outcomes="{{ outcomes }}"
+  quote="{{ quote }}"
+  quote-name="Katy &mdash; Texas"
+  facts="{{ facts }}"
+  cta-title="Join the waitlist for the next cohort."
+  cta-body="Cohorts are kept intentionally small. Book a short call and I'll walk you through the format, the commitment, and whether this circle is the right fit for where you are."
+  cta-label="Join the Waitlist"
+  hint-size="100%,100%"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      tagline: 'A small, guided circle for growth, clarity, and bold leadership \u2014 walked out together rather than alone.',
+      intro: 'Ambitious women are often the ones holding everything together and the last ones given space to think. The Collective is that space: honest conversation, real frameworks, and a group of women who refuse to let you shrink.',
+      heroImg: "url('https://static.wixstatic.com/media/79c53e_bfc599d9c3ba41feaf8ed76f9c2e3206~mv2.jpg/v1/fill/w_900,h_720,al_c,q_88,enc_avif,quality_auto/s.jpg')",
+      who: [
+        'You\u2019ve achieved a great deal and still sense there\u2019s a fuller version of your calling.',
+        'You want to grow boldly without compromising your faith, your family, or your integrity.',
+        'You\u2019re tired of doing the hard inner work in isolation.',
+        'You learn best in honest community \u2014 with women who tell you the truth kindly.',
+      ],
+      howIntro: 'We meet as a consistent cohort over a set season. Each gathering pairs a practical framework with guided discussion, personal reflection, and accountability that continues between sessions.',
+      steps: [
+        { num: '01', title: 'Apply', desc: 'A short conversation to make sure the cohort is the right fit for you \u2014 and you for it.' },
+        { num: '02', title: 'Gather', desc: 'Regular sessions with a small group, built on trust and confidentiality from day one.' },
+        { num: '03', title: 'Clarify', desc: 'Work through vision, calling, and leadership using the same frameworks I use one-on-one.' },
+        { num: '04', title: 'Go', desc: 'Leave with a clear next season, concrete commitments, and women still walking with you.' },
+      ],
+      outcomes: [
+        { title: 'Named calling', desc: 'Language for what you\u2019re actually here to do \u2014 not a vague sense of \u201csomething more.\u201d' },
+        { title: 'Bolder leadership', desc: 'The courage to take up the space you\u2019ve been circling, in work and at home.' },
+        { title: 'Real community', desc: 'A handful of women who know your story and keep showing up for it.' },
+      ],
+      quote: 'As a small business owner, I often feel like I\u2019m on an island, but her wisdom, encouragement, and guidance has given me clarity, support, and the push I needed. She has challenged me to grow in ways I never thought possible.',
+      facts: [
+        { label: 'Format', value: 'Small guided cohort' },
+        { label: 'Enrollment', value: 'Opens periodically' },
+        { label: 'First step', value: 'Join the waitlist' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

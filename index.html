@@ -135,7 +135,7 @@
               <div style="font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent,#94765a);font-weight:600;margin-bottom:12px;">{{ s.tag }}</div>
               <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.9rem;margin:0 0 10px;line-height:1.05;">{{ s.title }}</h3>
               <p style="color:var(--muted,#6e6a62);margin:0 0 22px;font-size:1rem;flex:1;text-wrap:pretty;">{{ s.desc }}</p>
-              <a href="https://scheduler.zoom.us/brooke-domek" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.5em;font-weight:600;font-size:.9rem;letter-spacing:.02em;color:var(--ink,#1e1d1b);" style-hover="color:var(--accent,#94765a);">{{ s.cta }} <span style="color:var(--accent,#94765a);">&rarr;</span></a>
+              <a href="{{ s.href }}" style="display:inline-flex;align-items:center;gap:.5em;font-weight:600;font-size:.9rem;letter-spacing:.02em;color:var(--ink,#1e1d1b);" style-hover="color:var(--accent,#94765a);">{{ s.cta }} <span style="color:var(--accent,#94765a);">&rarr;</span></a>
             </div>
           </article>
         </sc-for>
@@ -152,7 +152,7 @@
         <p style="opacity:.9;margin:0;max-width:34em;text-wrap:pretty;">A guided circle for growth, clarity, and bold leadership &mdash; together. Doors open in cohorts; join the waitlist to be first to know.</p>
       </div>
       <div style="justify-self:end;">
-        <a href="https://scheduler.zoom.us/brooke-domek" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;padding:1.05em 2em;background:#faf8f3;color:var(--ink,#1e1d1b);border-radius:100px;font-size:.95rem;font-weight:600;letter-spacing:.02em;" style-hover="background:var(--ink,#1e1d1b);color:#faf8f3;">Join the Waitlist</a>
+        <a href="womens-collective.html" style="display:inline-flex;align-items:center;padding:1.05em 2em;background:#faf8f3;color:var(--ink,#1e1d1b);border-radius:100px;font-size:.95rem;font-weight:600;letter-spacing:.02em;text-decoration:none;" style-hover="background:var(--ink,#1e1d1b);color:#faf8f3;">Join the Waitlist</a>
       </div>
     </div>
   </section>
@@ -292,10 +292,10 @@ class Component extends DCLogic {
       next: () => this.setState(s => ({ ti: (s.ti + 1) % TS.length })),
       dots: TS.map((t, idx) => ({ go: () => this.setState({ ti: idx }), color: idx === _i ? '#c9b49c' : 'rgba(250,248,243,.28)' })),
       services: [
-        { tag: 'One-on-One Coaching', title: 'Expand Your Capacity', desc: 'Empower your leadership journey with personalized executive coaching that unlocks the next level.', cta: 'Read more', img: img('79c53e_c13d3fbffd824efb84e38af75beff613~mv2.jpg', 640, 360) },
-        { tag: 'Team Coaching', title: 'Create a Thriving Team', desc: 'Elevate your organization through team coaching that aligns people around a shared, clear vision.', cta: 'Read more', img: img('79c53e_d5914b14832e4e27a4e87054b23558f0~mv2.jpg', 640, 360) },
-        { tag: 'Life Planning', title: 'Clarify Your Unique Calling', desc: 'Discover your purpose through personalized life planning built around what matters most to you.', cta: 'Read more', img: img('79c53e_839366eaf787422e8a2b290b029e4449~mv2.png', 640, 360) },
-        { tag: 'Group Program', title: "Women's Leadership Collective", desc: 'For accomplished, faith-driven women who are done staying stuck and ready to lead boldly.', cta: 'Join the waitlist', img: img('79c53e_bfc599d9c3ba41feaf8ed76f9c2e3206~mv2.jpg', 640, 360) },
+        { tag: 'One-on-One Coaching', title: 'Expand Your Capacity', desc: 'Empower your leadership journey with personalized executive coaching that unlocks the next level.', cta: 'Read more', href: 'expand-your-capacity.html', img: img('79c53e_c13d3fbffd824efb84e38af75beff613~mv2.jpg', 640, 360) },
+        { tag: 'Team Coaching', title: 'Create a Thriving Team', desc: 'Elevate your organization through team coaching that aligns people around a shared, clear vision.', cta: 'Read more', href: 'thriving-team.html', img: img('79c53e_d5914b14832e4e27a4e87054b23558f0~mv2.jpg', 640, 360) },
+        { tag: 'Life Planning', title: 'Clarify Your Unique Calling', desc: 'Discover your purpose through personalized life planning built around what matters most to you.', cta: 'Read more', href: 'younique.html', img: img('79c53e_839366eaf787422e8a2b290b029e4449~mv2.png', 640, 360) },
+        { tag: 'Group Program', title: "Women's Leadership Collective", desc: 'For accomplished, faith-driven women who are done staying stuck and ready to lead boldly.', cta: 'Join the waitlist', href: 'womens-collective.html', img: img('79c53e_bfc599d9c3ba41feaf8ed76f9c2e3206~mv2.jpg', 640, 360) },
       ],
     };
   }

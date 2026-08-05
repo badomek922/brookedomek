@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<dc-import name="ServicePage"
+  kicker="Team &amp; Organizational Coaching"
+  title="Create a Thriving Team"
+  tagline="{{ tagline }}"
+  intro="{{ intro }}"
+  hero-img="{{ heroImg }}"
+  who-title="Your people are talented. Something is still getting lost between them."
+  who="{{ who }}"
+  how-title="From misalignment to shared momentum."
+  how-intro="{{ howIntro }}"
+  steps="{{ steps }}"
+  outcomes-title="A team that pulls in the same direction."
+  outcomes="{{ outcomes }}"
+  quote="{{ quote }}"
+  quote-name="LeighAnn &mdash; Kentucky"
+  facts="{{ facts }}"
+  cta-title="Let's look at what your team is capable of."
+  cta-body="Start with a conversation about where the friction is. I'll tell you honestly whether team coaching is the right intervention \u2014 and what it would look like."
+  cta-label="Book a Team Consultation"
+  hint-size="100%,100%"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      tagline: 'Team coaching that aligns capable people around a shared, clear vision \u2014 and gives them a common language for how they work.',
+      intro: 'Most teams don\u2019t underperform because of a lack of talent. They underperform because of unclear direction, unspoken friction, and potential that never gets named. That is fixable.',
+      heroImg: "url('https://static.wixstatic.com/media/79c53e_d5914b14832e4e27a4e87054b23558f0~mv2.jpg/v1/fill/w_900,h_720,al_c,q_88,enc_avif,quality_auto/s.jpg')",
+      who: [
+        'Your team is busy and well-intentioned, but pulling in slightly different directions.',
+        'Personality differences are being read as character flaws instead of preferences.',
+        'Strategy is clear in leadership\u2019s heads and fuzzy everywhere else.',
+        'You\u2019re growing or restructuring, and you need everyone rowing together through it.',
+      ],
+      howIntro: 'I work with the team as a system \u2014 not a collection of individuals. We build shared language first, then use it to do the harder work of alignment, candor, and commitment.',
+      steps: [
+        { num: '01', title: 'Listen', desc: 'A consultation and discovery process to understand the real dynamics, not just the stated ones.' },
+        { num: '02', title: 'Profile', desc: 'Insights Discovery gives everyone a memorable, non-threatening language for how they think and communicate.' },
+        { num: '03', title: 'Align', desc: 'Facilitated sessions that surface friction safely and connect the team to one clear vision.' },
+        { num: '04', title: 'Embed', desc: 'Practical rhythms and agreements so the shift survives the return to daily work.' },
+      ],
+      outcomes: [
+        { title: 'Shared direction', desc: 'One vision everyone can articulate \u2014 and make daily decisions against.' },
+        { title: 'Less friction', desc: 'Difference becomes a resource instead of a recurring source of conflict.' },
+        { title: 'Faster trust', desc: 'A common vocabulary that makes candor and appreciation feel natural, not awkward.' },
+      ],
+      quote: 'She was professional, prepared, warm, obviously intelligent, and I believed her when she said she was there to be a "fierce advocate" for my personal ministry goals, for those of the staff, and to better prepare us to serve and work with the congregation.',
+      facts: [
+        { label: 'Format', value: 'Facilitated team sessions' },
+        { label: 'Where', value: 'On-site or virtual' },
+        { label: 'First step', value: 'Free consultation' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

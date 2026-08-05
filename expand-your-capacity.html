@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<dc-import name="ServicePage"
+  kicker="One-on-One Executive Coaching"
+  title="Expand Your Capacity"
+  tagline="{{ tagline }}"
+  intro="{{ intro }}"
+  hero-img="{{ heroImg }}"
+  who-title="You're capable and accomplished &mdash; and quietly running out of room."
+  who="{{ who }}"
+  how-title="A structured partnership, built around you."
+  how-intro="{{ howIntro }}"
+  steps="{{ steps }}"
+  outcomes-title="Leadership that feels lighter and reaches further."
+  outcomes="{{ outcomes }}"
+  quote="{{ quote }}"
+  quote-name="Bob &mdash; Texas"
+  facts="{{ facts }}"
+  cta-title="Let's talk about where you're headed."
+  cta-body="A vision call is a real conversation, not a sales pitch. We'll look at where you are, what's in the way, and whether coaching together makes sense."
+  cta-label="Book Your Vision Call"
+  hint-size="100%,100%"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      tagline: 'Personalized executive coaching for leaders who are ready to think differently, decide with confidence, and grow without burning out.',
+      intro: 'Most leaders try to out-work their limits. Coaching gives you something better: a thinking partner who helps you see the blocks, reframe what\u2019s possible, and build a clear path forward.',
+      heroImg: "url('https://static.wixstatic.com/media/79c53e_c13d3fbffd824efb84e38af75beff613~mv2.jpg/v1/fill/w_900,h_720,al_c,q_88,enc_avif,quality_auto/s.jpg')",
+      who: [
+        'You\u2019ve outgrown the strategies that got you here, and more effort isn\u2019t producing more results.',
+        'You\u2019re facing a major decision \u2014 a role, a pivot, a restructure \u2014 and want to make it well.',
+        'You\u2019re carrying more than anyone sees, and you need a confidential place to think out loud.',
+        'You want growth that doesn\u2019t cost you your health, your family, or your sense of calling.',
+      ],
+      howIntro: 'Every engagement begins with clarity and ends with momentum. We work in a rhythm that fits a real leadership calendar \u2014 focused sessions, honest reflection, and concrete next steps between them.',
+      steps: [
+        { num: '01', title: 'Discover', desc: 'We start with a complimentary vision call to name what you actually want and whether we\u2019re the right fit.' },
+        { num: '02', title: 'Assess', desc: 'Using Insights Discovery and MetaPerformance\u2122 tools, we surface the patterns driving your current results.' },
+        { num: '03', title: 'Reframe', desc: 'We challenge the beliefs quietly capping your performance and choose more useful ones.' },
+        { num: '04', title: 'Execute', desc: 'You leave each session with high-leverage actions \u2014 and accountability to follow through.' },
+      ],
+      outcomes: [
+        { title: 'Clarity under pressure', desc: 'Cut through the mental noise so your best judgment is available when the stakes are highest.' },
+        { title: 'Confident decisions', desc: 'Replace second-guessing with a repeatable way to move forward, even in ambiguity.' },
+        { title: 'Sustainable energy', desc: 'Grow from capacity rather than adrenaline \u2014 change that holds long after we finish.' },
+      ],
+      quote: 'She went straight into action, carefully pulling apart the layers of my onion and holding up the mirror of self-actualization with great insight and questions. Truly an amazing experience that helped my compass stop spinning at ten thousand RPMs and point to true north.',
+      facts: [
+        { label: 'Format', value: 'One-on-one sessions' },
+        { label: 'Where', value: 'Virtual or in person' },
+        { label: 'First step', value: 'Free vision call' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>
