@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;-webkit-font-smoothing:antialiased;}
+  a{color:var(--accent,#94765a);text-decoration:none;}
+  a:hover{color:var(--ink,#1e1d1b);}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:none;}}
+</style>
+</helmet>
+<div style="--base: {{ base }}; --alt: {{ alt }}; --ink: {{ ink }}; --muted: {{ muted }}; --line: {{ line }}; --accent: {{ accent }}; font-family:'Instrument Sans',system-ui,sans-serif; color:var(--ink,#1e1d1b); background:var(--base,#faf8f3); font-size:17px; line-height:1.65;">
+
+  <!-- ============ HEADER ============ -->
+  <header style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px clamp(24px,6vw,72px);background:var(--base,#faf8f3);border-bottom:1px solid var(--line,#e5e0d6);">
+    <a href="#top" style="display:flex;flex-direction:column;line-height:1;color:var(--ink,#1e1d1b);">
+      <span style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;letter-spacing:.06em;">Brooke Domek</span>
+      <span style="font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--muted,#6e6a62);margin-top:5px;">Vision &middot; Leadership &middot; Team Coaching</span>
+    </a>
+    <nav style="display:flex;align-items:center;gap:30px;font-size:.82rem;letter-spacing:.04em;">
+      <a href="#work" style="color:var(--ink,#1e1d1b);">Services</a>
+      <a href="#about" style="color:var(--ink,#1e1d1b);">The&nbsp;Approach</a>
+      <a href="#voices" style="color:var(--ink,#1e1d1b);">Testimonials</a>
+      <a href="#collective" style="color:var(--ink,#1e1d1b);">Collective</a>
+      <a href="#giving" style="color:var(--ink,#1e1d1b);">Giving&nbsp;Back</a>
+    </nav>
+    <a href="https://scheduler.zoom.us/brooke-domek" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;padding:.8em 1.4em;background:var(--ink,#1e1d1b);color:#faf8f3;border-radius:100px;font-size:.82rem;font-weight:600;letter-spacing:.03em;white-space:nowrap;" style-hover="background:var(--accent,#94765a);color:#faf8f3;">Book Your Vision Call</a>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section id="top" style="display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,6vw,80px);align-items:center;padding:clamp(56px,8vw,110px) clamp(24px,6vw,72px) clamp(48px,6vw,90px);max-width:1360px;margin:0 auto;">
+    <div style="animation:fadeUp .9s ease both;">
+      <div style="font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--accent,#94765a);font-weight:600;margin-bottom:24px;">Executive &middot; Team &middot; Vision Coaching</div>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(2.7rem,5.4vw,4.6rem);line-height:1.02;letter-spacing:-.01em;margin:0 0 26px;">Reimagine your potential.<br><span style="font-style:italic;color:var(--accent,#94765a);">Clarify</span> your vision. Amplify your impact.</h1>
+      <p style="font-size:1.12rem;color:var(--muted,#6e6a62);max-width:30em;margin:0 0 34px;text-wrap:pretty;">Coaching that transforms challenge into breakthrough &mdash; where clarity meets capability. For the leaders, teams, and women ready to think differently and lead boldly.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:14px;">
+        <a href="https://scheduler.zoom.us/brooke-domek" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;padding:1.05em 1.9em;background:var(--ink,#1e1d1b);color:#faf8f3;border-radius:100px;font-size:.95rem;font-weight:600;letter-spacing:.02em;" style-hover="background:var(--accent,#94765a);color:#faf8f3;">Book Your Vision Call</a>
+        <a href="#work" style="display:inline-flex;align-items:center;padding:1.05em 1.9em;border:1px solid var(--ink,#1e1d1b);color:var(--ink,#1e1d1b);border-radius:100px;font-size:.95rem;font-weight:600;letter-spacing:.02em;" style-hover="background:var(--ink,#1e1d1b);color:#faf8f3;">Explore the work</a>
+      </div>
+    </div>
+    <div style="position:relative;justify-self:center;width:100%;max-width:460px;">
+      <div style="position:absolute;inset:22px -22px -22px 22px;background:var(--alt,#efeae1);border-radius:230px 230px 20px 20px;"></div>
+      <div style="position:relative;aspect-ratio:4/4.7;background-image:url('https://static.wixstatic.com/media/17bab3_01dee518323d4e35b0dba8d593aa61ac~mv2.jpg/v1/fill/w_760,h_880,al_c,q_90,enc_avif,quality_auto/portrait.jpg');background-size:cover;background-position:center 20%;border-radius:230px 230px 20px 20px;"></div>
+    </div>
+  </section>
+
+  <!-- credential strip -->
+  <div style="border-top:1px solid var(--line,#e5e0d6);border-bottom:1px solid var(--line,#e5e0d6);">
+    <div style="max-width:1360px;margin:0 auto;padding:22px clamp(24px,6vw,72px);display:flex;flex-wrap:wrap;justify-content:center;gap:14px 40px;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted,#6e6a62);">
+      <span>MetaPerformance&trade; Coach</span>
+      <span style="color:var(--accent,#94765a);">&bull;</span>
+      <span>Insights Practitioner</span>
+      <span style="color:var(--accent,#94765a);">&bull;</span>
+      <span>Life Younique&reg; Coach</span>
+      <span style="color:var(--accent,#94765a);">&bull;</span>
+      <span>Certified Vision Framer</span>
+    </div>
+  </div>
+
+  <!-- ============ IS THIS YOU ============ -->
+  <section style="background:var(--alt,#efeae1);padding:clamp(72px,10vw,140px) clamp(24px,6vw,72px);">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div style="max-width:640px;margin-bottom:56px;">
+        <div style="font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--accent,#94765a);font-weight:600;margin-bottom:20px;">Is this you?</div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(2rem,3.8vw,3.1rem);line-height:1.08;margin:0;letter-spacing:-.01em;">Leading is hard. Unlocking your full potential can feel even harder.</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3vw,48px);">
+        <div style="border-top:2px solid var(--ink,#1e1d1b);padding-top:26px;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--accent,#94765a);margin-bottom:14px;">01</div>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.7rem;margin:0 0 10px;">Burnt out?</h3>
+          <p style="color:var(--muted,#6e6a62);margin:0;font-size:1rem;text-wrap:pretty;">Leaders and teams struggle with clarity, alignment, and sustainable growth &mdash; running on effort instead of direction.</p>
+        </div>
+        <div style="border-top:2px solid var(--ink,#1e1d1b);padding-top:26px;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--accent,#94765a);margin-bottom:14px;">02</div>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.7rem;margin:0 0 10px;">Feeling stuck?</h3>
+          <p style="color:var(--muted,#6e6a62);margin:0;font-size:1rem;text-wrap:pretty;">You lack a clear path forward for the major life and career decisions in front of you &mdash; and guessing isn't working.</p>
+        </div>
+        <div style="border-top:2px solid var(--ink,#1e1d1b);padding-top:26px;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--accent,#94765a);margin-bottom:14px;">03</div>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.7rem;margin:0 0 10px;">Fractured team?</h3>
+          <p style="color:var(--muted,#6e6a62);margin:0;font-size:1rem;text-wrap:pretty;">Your organization is held back by misalignment, unclear strategy, and potential that stays untapped.</p>
+        </div>
+      </div>
+      <p style="max-width:52em;margin:52px 0 0;font-size:1.18rem;line-height:1.7;text-wrap:pretty;">Sustainable growth isn't about doing more &mdash; it's about thinking differently and executing strategically. It takes someone who can help you <em style="font-style:italic;color:var(--accent,#94765a);">see the blocks, reframe the possibilities, and create a clear path forward.</em></p>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" style="padding:clamp(72px,10vw,140px) clamp(24px,6vw,72px);">
+    <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(36px,6vw,88px);align-items:center;">
+      <div style="position:relative;">
+        <div style="aspect-ratio:4/4.4;background-image:url('https://static.wixstatic.com/media/17bab3_afc7ce9764b04e758b9d9abdf27c945d~mv2.jpg/v1/fill/w_680,h_748,al_c,q_88,enc_avif,quality_auto/brooke.jpg');background-size:cover;background-position:center;border-radius:20px 20px 200px 200px;"></div>
+        <div style="position:absolute;bottom:26px;left:-18px;background:var(--base,#faf8f3);border:1px solid var(--line,#e5e0d6);border-radius:14px;padding:16px 22px;box-shadow:0 18px 40px -24px rgba(38,37,33,.4);">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;">Brooke Domek</div>
+          <div style="font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted,#6e6a62);">Certified Vision Coach</div>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--accent,#94765a);font-weight:600;margin-bottom:20px;">Meet Brooke &mdash; I'm here to serve</div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(2rem,3.6vw,3rem);line-height:1.1;margin:0 0 26px;letter-spacing:-.01em;">I've been there, I've done that &mdash; and I'd love to show you the way.</h2>
+        <p style="color:var(--muted,#6e6a62);margin:0 0 18px;text-wrap:pretty;">As a certified MetaPerformance&trade; Coach, Insights Assessment Practitioner, and Life Younique&reg; Coach, I've learned that transformation isn't about doing more &mdash; it's about thinking differently and executing strategically.</p>
+        <p style="color:var(--muted,#6e6a62);margin:0 0 28px;text-wrap:pretty;">Most leaders guess their way forward, hoping effort alone will create change. But real growth comes from having someone who can help you see the blocks, reframe the possibilities, and build a clear path forward.</p>
+        <sc-if value="{{ showFaithCaption }}" hint-placeholder-val="{{ true }}">
+          <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;line-height:1.5;color:var(--ink,#1e1d1b);border-left:2px solid var(--accent,#94765a);padding-left:22px;margin:0;">As a professional, wife, and mother, I boldly step into God's invitations &mdash; pushing boundaries while staying grounded in what matters most.</p>
+        </sc-if>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WORK WITH ME ============ -->
+  <section id="work" style="background:var(--alt,#efeae1);padding:clamp(72px,10vw,140px) clamp(24px,6vw,72px);">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px;margin-bottom:56px;">
+        <div style="max-width:640px;">
+          <div style="font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--accent,#94765a);font-weight:600;margin-bottom:20px;">Work with me</div>
+          <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(2rem,3.8vw,3.1rem);line-height:1.08;margin:0;letter-spacing:-.01em;">Four ways to move from where you are to where you're called to be.</h2>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(20px,2.5vw,36px);">
+        <sc-for list="{{ services }}" as="s" hint-placeholder-count="4">
+          <article style="background:var(--base,#faf8f3);border:1px solid var(--line,#e5e0d6);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;" style-hover="border-color:var(--accent,#94765a);">
+            <div style="aspect-ratio:16/9;background-image:{{ s.img }};background-size:cover;background-position:center;"></div>
+            <div style="padding:30px 32px 34px;display:flex;flex-direction:column;flex:1;">
+              <div style="font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent,#94765a);font-weight:600;margin-bottom:12px;">{{ s.tag }}</div>
+              <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.9rem;margin:0 0 10px;line-height:1.05;">{{ s.title }}</h3>
+              <p style="color:var(--muted,#6e6a62);margin:0 0 22px;font-size:1rem;flex:1;text-wrap:pretty;">{{ s.desc }}</p>
+              <a href="https://scheduler.zoom.us/brooke-domek" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.5em;font-weight:600;font-size:.9rem;letter-spacing:.02em;color:var(--ink,#1e1d1b);" style-hover="color:var(--accent,#94765a);">{{ s.cta }} <span style="color:var(--accent,#94765a);">&rarr;</span></a>
+            </div>
+          </article>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COLLECTIVE BAND ============ -->
+  <section id="collective" style="padding:clamp(72px,10vw,140px) clamp(24px,6vw,72px);">
+    <div style="max-width:1080px;margin:0 auto;background:var(--accent,#94765a);border-radius:26px;padding:clamp(40px,6vw,72px);color:#faf8f3;display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center;">
+      <div>
+        <div style="font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;opacity:.85;font-weight:600;margin-bottom:20px;">Women's Leadership Collective</div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(1.9rem,3.4vw,2.8rem);line-height:1.1;margin:0 0 16px;">For accomplished, faith-driven women who are done staying stuck.</h2>
+        <p style="opacity:.9;margin:0;max-width:34em;text-wrap:pretty;">A guided circle for growth, clarity, and bold leadership &mdash; together. Doors open in cohorts; join the waitlist to be first to know.</p>
+      </div>
+      <div style="justify-self:end;">
+        <a href="https://scheduler.zoom.us/brooke-domek" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;padding:1.05em 2em;background:#faf8f3;color:var(--ink,#1e1d1b);border-radius:100px;font-size:.95rem;font-weight:600;letter-spacing:.02em;" style-hover="background:var(--ink,#1e1d1b);color:#faf8f3;">Join the Waitlist</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAITH FEATURED BAND ============ -->
+  <sc-if value="{{ showFaithBand }}" hint-placeholder-val="{{ false }}">
+    <section style="background:var(--alt,#efeae1);padding:clamp(72px,10vw,130px) clamp(24px,6vw,72px);">
+      <div style="max-width:900px;margin:0 auto;text-align:center;">
+        <div style="font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--accent,#94765a);font-weight:600;margin-bottom:26px;">Grounded in faith</div>
+        <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;font-size:clamp(1.7rem,3.4vw,2.7rem);line-height:1.3;margin:0;text-wrap:pretty;">As a professional, wife, and mother, I boldly step into God's invitations &mdash; pushing boundaries while staying grounded in what matters most.</p>
+      </div>
+    </section>
+  </sc-if>
+
+  <!-- ============ TESTIMONIAL ============ -->
+  <section id="voices" style="background:var(--ink,#1e1d1b);color:#faf8f3;padding:clamp(80px,11vw,150px) clamp(24px,6vw,72px);">
+    <div style="max-width:1000px;margin:0 auto;">
+      <div style="text-align:center;font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--accent,#94765a);font-weight:600;margin-bottom:40px;">In their words</div>
+      <div style="min-height:300px;display:flex;flex-direction:column;justify-content:center;text-align:center;">
+        <blockquote style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(1.4rem,2.9vw,2.4rem);line-height:1.36;margin:0 0 26px;text-wrap:pretty;">&ldquo;{{ current.quote }}&rdquo;</blockquote>
+        <div style="font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:#c9b49c;">{{ current.name }}</div>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:center;gap:22px;margin-top:44px;">
+        <button onClick="{{ prev }}" aria-label="Previous testimonial" style="width:46px;height:46px;border-radius:50%;border:1px solid rgba(250,248,243,.3);background:transparent;color:#faf8f3;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;" style-hover="background:var(--accent,#94765a);border-color:var(--accent,#94765a);">&larr;</button>
+        <div style="display:flex;gap:12px;">
+          <sc-for list="{{ dots }}" as="d" hint-placeholder-count="4">
+            <button onClick="{{ d.go }}" aria-label="Show testimonial" style="width:9px;height:9px;padding:0;border-radius:50%;border:none;cursor:pointer;background:{{ d.color }};transition:background .2s;"></button>
+          </sc-for>
+        </div>
+        <button onClick="{{ next }}" aria-label="Next testimonial" style="width:46px;height:46px;border-radius:50%;border:1px solid rgba(250,248,243,.3);background:transparent;color:#faf8f3;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;" style-hover="background:var(--accent,#94765a);border-color:var(--accent,#94765a);">&rarr;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CERTIFIED BY ============ -->
+  <section id="certs" style="padding:clamp(72px,9vw,120px) clamp(24px,6vw,72px);">
+    <div style="max-width:1160px;margin:0 auto;">
+      <div style="text-align:center;max-width:640px;margin:0 auto 56px;">
+        <div style="font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--accent,#94765a);font-weight:600;margin-bottom:20px;">Credentials you can trust</div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(1.9rem,3.6vw,3rem);line-height:1.1;margin:0 0 14px;letter-spacing:-.01em;">Rigorously certified. Deeply practical.</h2>
+        <p style="color:var(--muted,#6e6a62);margin:0;text-wrap:pretty;">Every engagement draws on world-class coaching frameworks. Select a certification to see how it shapes our work together.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(18px,2.5vw,36px);">
+        <a href="metaperformance.html" style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px;padding:14px;border-radius:16px;color:var(--ink,#1e1d1b);text-decoration:none;transition:background .2s;" style-hover="background:var(--alt,#efeae1);">
+          <div style="width:128px;"><dc-import name="CertSeal" logo="https://caylahorey.com/wp-content/uploads/meta-performance-institute-600-300x300.png" initials="MP" line1="MetaPerformance" line2="Coach" hint-size="128px,128px"></dc-import></div>
+          <div><div style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.3rem;line-height:1.1;">MetaPerformance&trade;</div><div style="font-size:.82rem;color:var(--muted,#6e6a62);margin-top:2px;">Certified Coach</div></div>
+        </a>
+        <a href="insights.html" style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px;padding:14px;border-radius:16px;color:var(--ink,#1e1d1b);text-decoration:none;transition:background .2s;" style-hover="background:var(--alt,#efeae1);">
+          <div style="width:128px;"><dc-import name="CertSeal" logo="https://static.wixstatic.com/media/17bab3_e49d436b41544b11bb0ad577aeee2cfd~mv2.png" circle="true" initials="ID" line1="Insights" line2="Practitioner" hint-size="128px,128px"></dc-import></div>
+          <div><div style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.3rem;line-height:1.1;">Insights Discovery</div><div style="font-size:.82rem;color:var(--muted,#6e6a62);margin-top:2px;">Certified Practitioner</div></div>
+        </a>
+        <a href="younique.html" style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px;padding:14px;border-radius:16px;color:var(--ink,#1e1d1b);text-decoration:none;transition:background .2s;" style-hover="background:var(--alt,#efeae1);">
+          <div style="width:128px;"><dc-import name="CertSeal" logo="https://static.wixstatic.com/media/a80787_7811b2ae635641749fa669ec0cdbe04d~mv2.png" initials="Y" line1="Life Younique" line2="Coach" hint-size="128px,128px"></dc-import></div>
+          <div><div style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.3rem;line-height:1.1;">Life Younique&reg;</div><div style="font-size:.82rem;color:var(--muted,#6e6a62);margin-top:2px;">Certified Coach</div></div>
+        </a>
+        <a href="vision-framer.html" style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px;padding:14px;border-radius:16px;color:var(--ink,#1e1d1b);text-decoration:none;transition:background .2s;" style-hover="background:var(--alt,#efeae1);">
+          <div style="width:128px;"><dc-import name="CertSeal" logo="https://static.wixstatic.com/media/a80787_83598bffc0b24ac184b0d32d3e956fcb~mv2.png" initials="VF" line1="Vision" line2="Framer" hint-size="128px,128px"></dc-import></div>
+          <div><div style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.3rem;line-height:1.1;">Vision Framer</div><div style="font-size:.82rem;color:var(--muted,#6e6a62);margin-top:2px;">Certified</div></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section id="book" style="background:var(--alt,#efeae1);padding:clamp(80px,11vw,150px) clamp(24px,6vw,72px);">
+    <div style="max-width:820px;margin:0 auto;text-align:center;">
+      <div style="font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--accent,#94765a);font-weight:600;margin-bottom:24px;">Your next step</div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(2.2rem,4.6vw,3.8rem);line-height:1.05;margin:0 0 24px;letter-spacing:-.01em;">Ready to reimagine what's possible?</h2>
+      <p style="font-size:1.15rem;color:var(--muted,#6e6a62);max-width:34em;margin:0 auto 36px;text-wrap:pretty;">Let's find the clarity beneath the noise and build the path forward &mdash; together. Start with a complimentary vision call.</p>
+      <a href="https://scheduler.zoom.us/brooke-domek" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;padding:1.15em 2.2em;background:var(--ink,#1e1d1b);color:#faf8f3;border-radius:100px;font-size:1rem;font-weight:600;letter-spacing:.02em;" style-hover="background:var(--accent,#94765a);color:#faf8f3;">Book Your Vision Call</a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer id="giving" style="background:var(--ink,#1e1d1b);color:#cfc9bd;padding:clamp(56px,7vw,84px) clamp(24px,6vw,72px) 40px;">
+    <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:44px;border-bottom:1px solid rgba(244,240,230,.14);">
+      <div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:600;color:#faf8f3;letter-spacing:.04em;">Brooke Domek</div>
+        <p style="max-width:26em;color:#a8a296;margin:14px 0 0;font-size:.98rem;text-wrap:pretty;">Executive, team, and vision coaching &mdash; where clarity meets capability.</p>
+      </div>
+      <div>
+        <div style="font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:#847f74;margin-bottom:16px;">Explore</div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:.95rem;">
+          <a href="#work" style="color:#cfc9bd;" style-hover="color:#faf8f3;">Services</a>
+          <a href="#voices" style="color:#cfc9bd;" style-hover="color:#faf8f3;">Testimonials</a>
+          <a href="#collective" style="color:#cfc9bd;" style-hover="color:#faf8f3;">Women's Leadership Collective</a>
+          <a href="https://scheduler.zoom.us/brooke-domek" target="_blank" rel="noopener" style="color:#cfc9bd;" style-hover="color:#faf8f3;">Book a Vision Call</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:#847f74;margin-bottom:16px;">Generosity &amp; Giving Back</div>
+        <p style="color:#a8a296;margin:0 0 18px;font-size:.95rem;text-wrap:pretty;">A portion of every engagement supports causes close to our hearts.</p>
+        <div style="display:flex;gap:16px;font-size:.82rem;letter-spacing:.08em;">
+          <a href="https://www.facebook.com/brooke.domek/" target="_blank" rel="noopener" style="color:#cfc9bd;" style-hover="color:#faf8f3;">Facebook</a>
+          <a href="https://www.instagram.com/brookedomek/" target="_blank" rel="noopener" style="color:#cfc9bd;" style-hover="color:#faf8f3;">Instagram</a>
+          <a href="https://www.linkedin.com/in/brooke-domek-951128124/" target="_blank" rel="noopener" style="color:#cfc9bd;" style-hover="color:#faf8f3;">LinkedIn</a>
+          <a href="https://x.com/BdomekBrooke" target="_blank" rel="noopener" style="color:#cfc9bd;" style-hover="color:#faf8f3;">X</a>
+        </div>
+      </div>
+    </div>
+    <div style="max-width:1200px;margin:22px auto 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:.78rem;color:#847f74;">
+      <span>&copy; 2026 Brooke Domek LLC &mdash; in association with RunFree.co</span>
+      <span>Where clarity meets capability.</span>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;},&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#94765a&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#94765a&quot;,&quot;#7a5b3f&quot;,&quot;#2f5d5b&quot;,&quot;#6d4a5e&quot;,&quot;#33415c&quot;],&quot;section&quot;:&quot;Theme&quot;},&quot;warmBg&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;Ivory&quot;,&quot;options&quot;:[&quot;Ivory&quot;,&quot;Warm Sand&quot;,&quot;Cool Stone&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Theme&quot;},&quot;faith&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;Subtle&quot;,&quot;options&quot;:[&quot;Subtle&quot;,&quot;Featured&quot;,&quot;Hidden&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Content&quot;}}">
+class Component extends DCLogic {
+  state = { ti: 0 };
+  renderVals() {
+    const warm = this.props.warmBg ?? 'Ivory';
+    const palettes = {
+      'Ivory':      { base:'#faf8f3', alt:'#efeae1', ink:'#1e1d1b', muted:'#6e6a62', line:'#e5e0d6' },
+      'Warm Sand':  { base:'#efe7d8', alt:'#e5dbc7', ink:'#2b2620', muted:'#6e6656', line:'#d6c9b2' },
+      'Cool Stone': { base:'#f1f0ea', alt:'#e4e3da', ink:'#232420', muted:'#6a6a62', line:'#d3d2c7' },
+    };
+    const pal = palettes[warm] || palettes['Ivory'];
+    const accent = this.props.accent ?? '#94765a';
+    const faith = this.props.faith ?? 'Subtle';
+    const img = (id, w, h) => `url('https://static.wixstatic.com/media/${id}/v1/fill/w_${w},h_${h},al_c,q_85,enc_avif,quality_auto/s.jpg')`;
+    const TS = [
+      { name: 'Melissa \u2014 New York', quote: `Brooke's remarkable gift to see problems clearly, to reassess them in the light of greater truths, and to joyfully walk me into another space \u2014 without ever needing to solve the problem \u2014 is transforming for all who meet with her. Brooke redefined "coach" for me.` },
+      { name: 'LeighAnn \u2014 Kentucky', quote: `She was professional, prepared, warm, obviously intelligent, and I believed her when she said she was there to be a "fierce advocate" for my personal ministry goals, for those of the staff, and to better prepare us to serve and work with the congregation.` },
+      { name: 'Katy \u2014 Texas', quote: `Doing coaching with Brooke has truly been life-changing. As a small business owner, I often feel like I'm on an island, but her wisdom, encouragement, and guidance has given me clarity, support, and the push I needed. She has challenged me to grow in ways I never thought possible, and her influence is genuinely changing the trajectory of our business towards MetaPerformance.` },
+      { name: 'Bob \u2014 Texas', quote: `I've known Brooke for several years, both as a co-worker and friend. When she first asked what I thought about using a professional coach, I laughed and said "No" \u2014 it had nothing to do with her capabilities, and everything to do with my own stubbornness. The more I thought about my need to grow, the more I realized I could use some help. When I said yes, she went straight into action, carefully pulling apart the layers of my onion and holding up the mirror of self-actualization with great insight and questions. The way she diligently captures every conversation and never misses a clue is a testament to her ability to coach well \u2014 and to her genuine care for the individual. Truly an amazing experience that helped my compass stop spinning at ten thousand RPMs and point to true north.` },
+    ];
+    const _n = TS.length;
+    const _i = ((this.state.ti % _n) + _n) % _n;
+    return {
+      base: pal.base, alt: pal.alt, ink: pal.ink, muted: pal.muted, line: pal.line, accent,
+      showFaithCaption: faith === 'Subtle',
+      showFaithBand: faith === 'Featured',
+      current: TS[_i],
+      prev: () => this.setState(s => ({ ti: (((s.ti - 1) % TS.length) + TS.length) % TS.length })),
+      next: () => this.setState(s => ({ ti: (s.ti + 1) % TS.length })),
+      dots: TS.map((t, idx) => ({ go: () => this.setState({ ti: idx }), color: idx === _i ? '#c9b49c' : 'rgba(250,248,243,.28)' })),
+      services: [
+        { tag: 'One-on-One Coaching', title: 'Expand Your Capacity', desc: 'Empower your leadership journey with personalized executive coaching that unlocks the next level.', cta: 'Read more', img: img('79c53e_c13d3fbffd824efb84e38af75beff613~mv2.jpg', 640, 360) },
+        { tag: 'Team Coaching', title: 'Create a Thriving Team', desc: 'Elevate your organization through team coaching that aligns people around a shared, clear vision.', cta: 'Read more', img: img('79c53e_d5914b14832e4e27a4e87054b23558f0~mv2.jpg', 640, 360) },
+        { tag: 'Life Planning', title: 'Clarify Your Unique Calling', desc: 'Discover your purpose through personalized life planning built around what matters most to you.', cta: 'Read more', img: img('79c53e_839366eaf787422e8a2b290b029e4449~mv2.png', 640, 360) },
+        { tag: 'Group Program', title: "Women's Leadership Collective", desc: 'For accomplished, faith-driven women who are done staying stuck and ready to lead boldly.', cta: 'Join the waitlist', img: img('79c53e_bfc599d9c3ba41feaf8ed76f9c2e3206~mv2.jpg', 640, 360) },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

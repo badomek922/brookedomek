@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<dc-import name="CertPage"
+  cred="Executive Performance Coaching"
+  title="MetaPerformance&trade; Coach"
+  tagline="{{ tagline }}"
+  intro="{{ intro }}"
+  seal-logo="https://caylahorey.com/wp-content/uploads/meta-performance-institute-600-300x300.png"
+  seal-initials="MP" seal1="MetaPerformance" seal2="Coach"
+  what-kicker="The credential"
+  what-title="High performance starts in how you think."
+  what-body="{{ whatBody }}"
+  benefits-title="Lead with clarity, not just more effort."
+  benefits="{{ benefits }}"
+  pillars-kicker="The method"
+  pillars-title="How MetaPerformance coaching works"
+  pillars="{{ pillars }}"
+  cta-title="Ready to perform at your next level?"
+  cta-body="If effort alone has stopped moving the needle, MetaPerformance coaching gives you a smarter path. Start with a complimentary vision call."
+  hint-size="100%,100%"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      tagline: 'Coaching that rewires how you think, decide, and lead under pressure \u2014 so growth becomes sustainable, not exhausting.',
+      intro: 'MetaPerformance\u2122 is a science-backed coaching approach that works on the mental patterns beneath performance: the beliefs, focus, and habits that quietly govern how you show up when it matters most.',
+      whatBody: [
+        'Most leaders try to out-work their limits. MetaPerformance takes a different route \u2014 it targets the invisible operating system behind your results: how you interpret pressure, where your attention goes, and the stories you tell yourself about what is possible.',
+        'As a certified MetaPerformance\u2122 Coach, I help you surface those patterns, reframe the ones holding you back, and install new ones that hold up under real-world demand. The result is performance that feels lighter and lasts longer.',
+      ],
+      benefits: [
+        { title: 'Think more clearly', desc: 'Cut through mental noise so your best judgment is available when the stakes are highest.' },
+        { title: 'Decide with confidence', desc: 'Replace second-guessing with a repeatable way to move forward, even in ambiguity.' },
+        { title: 'Sustain your energy', desc: 'Grow without the burnout cycle \u2014 performance built on capacity, not adrenaline.' },
+      ],
+      pillars: [
+        { step: '01', title: 'Awareness', desc: 'Name the mental patterns driving your current results \u2014 the ones you can\u2019t see from inside them.' },
+        { step: '02', title: 'Reframe', desc: 'Challenge the beliefs that quietly cap your performance and choose more useful ones.' },
+        { step: '03', title: 'Strategy', desc: 'Turn new thinking into concrete, high-leverage actions for the decisions in front of you.' },
+        { step: '04', title: 'Sustain', desc: 'Build the habits and rhythms that keep the change in place long after our work together.' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<dc-import name="CertPage"
+  cred="Insights Discovery Practitioner"
+  title="Insights Practitioner"
+  tagline="{{ tagline }}"
+  intro="{{ intro }}"
+  seal-logo="https://static.wixstatic.com/media/17bab3_e49d436b41544b11bb0ad577aeee2cfd~mv2.png"
+  seal-circle="true"
+  seal-initials="ID" seal1="Insights" seal2="Practitioner"
+  what-kicker="The credential"
+  what-title="Know yourself. Understand others. Lead both better."
+  what-body="{{ whatBody }}"
+  benefits-title="Turn self-awareness into better teams."
+  benefits="{{ benefits }}"
+  pillars-kicker="The framework"
+  pillars-title="The four color energies"
+  pillars="{{ pillars }}"
+  cta-title="Ready to understand your team on a deeper level?"
+  cta-body="An Insights session gives individuals and teams a shared language for how they think, communicate, and work best. Start with a complimentary vision call."
+  hint-size="100%,100%"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      tagline: 'Self-awareness is the foundation of every great leader and every team that actually works together.',
+      intro: 'As an Insights Discovery Practitioner, I use a simple, memorable model of personal preference to help people understand themselves, appreciate difference, and communicate in ways that land.',
+      whatBody: [
+        'Insights Discovery uses a four-color model to make personality preferences tangible. Rather than boxing people in, it gives language for how each of us prefers to think, decide, and connect \u2014 and how to flex toward others who are wired differently.',
+        'I bring this into one-on-one coaching and team sessions alike. Individuals gain clarity on their strengths and blind spots; teams gain a shared vocabulary that turns friction into understanding and unlocks far better collaboration.',
+      ],
+      benefits: [
+        { title: 'Communicate better', desc: 'Adapt your message to how others actually receive it \u2014 and be understood the first time.' },
+        { title: 'Reduce friction', desc: 'See personality clashes as preference differences, not character flaws, and work through them.' },
+        { title: 'Build trust faster', desc: 'Give your team a common language that makes candor and appreciation feel natural.' },
+      ],
+      pillars: [
+        { step: 'Cool Blue', title: 'Precise', desc: 'Values accuracy, structure, and thinking things through before acting.' },
+        { step: 'Fiery Red', title: 'Decisive', desc: 'Driven, direct, and energized by results, pace, and challenge.' },
+        { step: 'Sunshine Yellow', title: 'Expressive', desc: 'Sociable and enthusiastic, bringing energy, ideas, and connection.' },
+        { step: 'Earth Green', title: 'Grounded', desc: 'Caring and steady, valuing harmony, trust, and people\u2019s wellbeing.' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

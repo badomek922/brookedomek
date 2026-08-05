@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<dc-import name="CertPage"
+  cred="Certified Vision Framer"
+  title="Certified Vision Framer"
+  tagline="{{ tagline }}"
+  intro="{{ intro }}"
+  seal-logo="https://static.wixstatic.com/media/a80787_83598bffc0b24ac184b0d32d3e956fcb~mv2.png"
+  seal-initials="VF" seal1="Vision" seal2="Framer"
+  what-kicker="The credential"
+  what-title="A vision you can see is a vision you can build."
+  what-body="{{ whatBody }}"
+  benefits-title="From a fuzzy 'more' to a clear north star."
+  benefits="{{ benefits }}"
+  pillars-kicker="The process"
+  pillars-title="How we frame your vision"
+  pillars="{{ pillars }}"
+  cta-title="Ready to frame a vision worth following?"
+  cta-body="Whether it\u2019s your life, your leadership, or your organization, a clear vision changes everything downstream of it. Start with a complimentary vision call."
+  hint-size="100%,100%"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      tagline: 'Turning a fuzzy sense of \u201cmore\u201d into a vision clear enough to make decisions by.',
+      intro: 'As a Certified Vision Framer, I guide leaders and teams to name, frame, and communicate a compelling picture of the future \u2014 the north star that aligns every decision beneath it.',
+      whatBody: [
+        'Most people carry a vision they\u2019ve never actually put into words. It stays a feeling \u2014 powerful but unusable. Vision Framing is the discipline of making it concrete: specific enough to guide choices, vivid enough to move people, and honest enough to be yours.',
+        'I help you separate the vision from the noise, frame it in language that sticks, and connect it to the next real steps. The outcome is a north star you can point to when the path gets uncertain \u2014 for yourself, your family, or your organization.',
+      ],
+      benefits: [
+        { title: 'Gain direction', desc: 'Trade a vague sense of \u201csomething more\u201d for a clear picture of where you\u2019re headed.' },
+        { title: 'Align people', desc: 'Give your team or family a shared future to row toward \u2014 no more pulling in different directions.' },
+        { title: 'Decide faster', desc: 'When the vision is clear, hard decisions get simpler: does this move us toward it, or not?' },
+      ],
+      pillars: [
+        { step: '01', title: 'Name', desc: 'Surface the future you actually want, beneath the shoulds and the noise.' },
+        { step: '02', title: 'Frame', desc: 'Shape it into language that is specific, vivid, and unmistakably yours.' },
+        { step: '03', title: 'Align', desc: 'Connect the vision to values and priorities so daily choices reinforce it.' },
+        { step: '04', title: 'Advance', desc: 'Translate the picture into the first concrete moves that build momentum.' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>
